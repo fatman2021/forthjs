@@ -51,9 +51,8 @@ function fib(st, r) {
   r.push(end, add, over, over, loop, sub, two, rot, one, zero)
 }
 
-var stack   = [],
-    program = [fib, push(16)]
+function print(st, r) {
+  console.log(st.join(" "))
+}
 
-run(stack, program)
-
-console.log(stack)
+run([], [print, fib, push(16)])
